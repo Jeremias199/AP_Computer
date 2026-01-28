@@ -15,7 +15,7 @@ Total = Subtotal * Tax_Rate
 print("*******************")
 print("*******************")
 print("*******Items*******")
-print(Item_1,"\n" Item_2, "\n", Item_3, "\n", Item_4)
+print(Item_1,"\n", Item_2, "\n", Item_3, "\n", Item_4)
 print("*******************")
 print("*******************")
 print("Subtotal: ", Subtotal)
