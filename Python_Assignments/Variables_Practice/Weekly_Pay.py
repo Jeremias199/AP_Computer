@@ -1,8 +1,7 @@
 print("Lets calculate your weekly pay!")
 
-Hourly_Wage = input("What's your hourly wage: ")
-Hours_Worked = input("How many hours did you work: ")
-Weekly_Pay = 0;
+Hourly_Wage = int(input("What's your hourly wage: "))
+Hours_Worked = int(input("How many hours did you work: "))
 
-Weekly_Pay = int(Hourly_Wage) * int(Hours_Worked)
+Weekly_Pay = Hourly_Wage * Hours_Worked
 print("Your weekly pay is $", Weekly_Pay)
