@@ -1,5 +1,4 @@
 import random
-from multiprocessing.connection import answer_challenge
 
 Vocab_Words = []
 Vocab_Definition = []
