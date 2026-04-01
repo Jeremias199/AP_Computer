@@ -16,6 +16,6 @@ def generator(amt_looped, high, low,):
             list_stuff.append(i+1)
             Random = random.randint(low, high)
             rand_list.append(Random)
-        print(list_stuff , "\n" , rand_list)
+        print("Sample Size:   ",list_stuff , "\nRandom Numbers:" , rand_list)
 
 generator(Samples_UI, High_Bound, Low_Bound)
