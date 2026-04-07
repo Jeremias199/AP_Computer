@@ -1,4 +1,9 @@
 import random
+
+Samples_UI = int(input("How many random samples do you need? "))
+Low_Bound = int(input("Lowest number in your random number generator: "))
+High_Bound = int(input("Highest number in your random number generator: "))
+
 #list_stuff will list the order of each random number starting from one.
 list_stuff = []
 #rand_list will list a random number according to the number of random samples.
