@@ -1,0 +1,25 @@
+import random
+#list_stuff will list the order of each random number starting from one.
+list_stuff = []
+#rand_list will list a random number according to the number of random samples.
+rand_list = []
+
+Samples_UI = int(input("How many random samples do you need? "))
+Low_Bound = int(input("Lowest number in your random number generator: "))
+High_Bound = int(input("Highest number in your random number generator: "))
+
+
+def generator(amt_looped, high, low,):
+    if amt_looped >= 10000:
+        print("TOO MANY SAMPLES")
+    elif amt_looped < 10000:
+        #This will loop according to the number of samples the user will need.
+        for i in range(amt_looped):
+            #This will start the list from one then it'll continue adding one after each iteration.
+            list_stuff.append(i+1)
+            #This will generate a random number with a buffer from the lowest number to the highest number.
+            Random = random.randint(low, high)
+            rand_list.append(Random)
+        print(f"\nSample Number: {list_stuff} \nRandom Number: {rand_list}")
+
+generator(Samples_UI, High_Bound, Low_Bound)
