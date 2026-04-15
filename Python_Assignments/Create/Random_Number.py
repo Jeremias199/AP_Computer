@@ -3,6 +3,7 @@ import random
 Samples_UI = int(input("How many random samples do you need? "))
 Repeating_Num = input("Would you like repeating numbers? (y/n)").lower()
 Bounds = input("Random number bounds (low and high) separate with space or comma: ")
+
 bounds_list = Bounds.replace(',', ' ').split()
 Low = int(bounds_list[0])
 High = int(bounds_list[1])
