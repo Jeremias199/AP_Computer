@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Flash_Card.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Flash_Card.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+
+<span class="s1">Vocab_Words </span><span class="s2">= []</span>
+<span class="s1">Vocab_Definition </span><span class="s2">= []</span>
+
+<span class="s1">Vocab_Amt </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;How many vocabulary words do you have? </span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">))</span>
+
+<span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">Vocab_Amt</span><span class="s2">):</span>
+    <span class="s1">Vocab_Words</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Vocabulary Words: &quot;</span><span class="s2">))</span>
+    <span class="s1">Vocab_Definition</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Vocabulary Definition: &quot;</span><span class="s2">))</span>
+
+
+<span class="s0">def </span><span class="s1">card</span><span class="s2">(</span><span class="s1">test</span><span class="s2">):</span>
+    <span class="s1">Choice </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Do you want to look ar your vocabulary words (press 1), or Do you want to test your knowledge? (press 2)?&quot;</span><span class="s2">))</span>
+
+    <span class="s0">if</span><span class="s2">(</span><span class="s1">Choice </span><span class="s2">== </span><span class="s4">1</span><span class="s2">):</span>
+        <span class="s0">for </span><span class="s1">j </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">test</span><span class="s2">):</span>
+            <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Word: &quot;</span><span class="s2">, </span><span class="s1">Vocab_Words</span><span class="s2">[</span><span class="s1">j</span><span class="s2">], </span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Definition: &quot;</span><span class="s2">, </span><span class="s1">Vocab_Definition</span><span class="s2">[</span><span class="s1">j</span><span class="s2">])</span>
+    <span class="s0">elif</span><span class="s2">(</span><span class="s1">Choice </span><span class="s2">== </span><span class="s4">2</span><span class="s2">):</span>
+        <span class="s1">Rand_Word </span><span class="s2">= </span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(</span><span class="s4">0</span><span class="s2">,</span><span class="s1">test</span><span class="s2">)</span>
+
+        <span class="s0">for </span><span class="s1">k </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">Rand_Word </span><span class="s2">+ </span><span class="s4">1</span><span class="s2">):</span>
+            <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Word: &quot;</span><span class="s2">, </span><span class="s1">Vocab_Words</span><span class="s2">[</span><span class="s1">k</span><span class="s2">],)</span>
+            <span class="s1">answer </span><span class="s2">= </span><span class="s1">input</span><span class="s2">( </span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Type the Definition: &quot;</span><span class="s2">)</span>
+
+            <span class="s0">if </span><span class="s1">answer </span><span class="s2">== </span><span class="s1">Vocab_Definition</span><span class="s2">[</span><span class="s1">k</span><span class="s2">]:</span>
+                <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Correct!!!&quot;</span><span class="s2">)</span>
+            <span class="s0">else</span><span class="s2">:</span>
+                <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;WRONG&quot;</span><span class="s2">)</span>
+
+<span class="s1">card</span><span class="s2">(</span><span class="s1">Vocab_Amt</span><span class="s2">)</span></pre>
+</body>
+</html>
