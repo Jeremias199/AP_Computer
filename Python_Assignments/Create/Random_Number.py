@@ -1,8 +1,8 @@
 import random
 
-Samples_UI = int(input("How many random samples do you need? "))
-Repeating_Num = input("Would you like repeating numbers? (y/n)").lower()
-Bounds = input("Random number bounds (low and high) separate with space or comma: ")
+Samples_UI = int(input("Random Samples: "))
+Repeating_Num = input("Would you like repeating numbers?\n(y/n):").lower()
+Bounds = input("Type the lowest and highest number to generate (make sure to separate with \",\" OR \" \"): ")
 
 bounds_list = Bounds.replace(',', ' ').split()
 Low = int(bounds_list[0])
@@ -13,14 +13,14 @@ def generator(amt_looped, high, low, repeating):
     if amt_looped >= 10000:
         print("TOO MANY SAMPLES")
     elif amt_looped < 10000:
-        #for i in range(amt_looped):
         rand_list = []
         list_stuff = []
+
+        #It'll be impossible to generate a random number if the sample size is greater than the highest number
         if repeating == "n" and amt_looped > (high-low+1):
             print("IMPOSSIBLE GENERATION")
             return
-
-        if repeating == "n" and amt_looped <= high:
+        elif repeating == "n" and amt_looped <= high:
             rand_list = random.sample(range(low,high +1),amt_looped)
         elif repeating == "y":
             for i in range(amt_looped):
